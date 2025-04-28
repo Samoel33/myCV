@@ -1,0 +1,331 @@
+/* === General Reset === */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in total element width/height */
+}
+
+/* === Base Body Styles === */
+body {
+  font-family: Arial, sans-serif; /* Set base font family */
+  background-color: #f8f9fa; /* Set light background color */
+  color: #333; /* Set default text color */
+  padding: 20px; /* Add padding around the body */
+}
+
+/* === Container Styling === */
+.container {
+  max-width: 1200px; /* Limit the container width */
+  margin: auto; /* Center the container horizontally */
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* === Navigation Styles === */
+.base_nav,
+.child_nav {
+  background-color: #003366; /* Navy background color */
+  color: white; /* White text color */
+  padding: 15px 20px; /* Spacing inside nav bar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow below nav */
+}
+
+.base_nav {
+  position: sticky; /* Make nav stay on top when scrolling */
+  top: 0; /* Stick to the top */
+  left: 0; /* Align to left */
+  z-index: 1000; /* Keep it above other elements */
+}
+
+nav {
+  display: flex; /* Use flex layout */
+  justify-content: space-between; /* Push items to both ends */
+  align-items: center; /* Center vertically */
+}
+
+.logo {
+  font-size: 1.8rem; /* Large font size for logo */
+  font-weight: bold; /* Bold text */
+}
+
+.navigation {
+  display: flex; /* Display list items in a row */
+  list-style: none; /* Remove default list bullets */
+  gap: 20px; /* Space between navigation links */
+  margin: 0;
+}
+.navigation li {
+  background-color: white; /* White background for each nav item */
+  color: black; /* Black text */
+  border-radius: 30px; /* Rounded corners */
+  padding: 0px 20px; /* Space inside the item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.navigation li:hover {
+  background-color: #ffd700; /* Gold background on hover */
+  color: #003366; /* Navy text on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* === Hero Section === */
+#hero {
+  display: grid; /* Layout in a grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  padding: 50px 20px; /* Space inside hero */
+  background: linear-gradient(
+    to right,
+    #003366,
+    #0055aa
+  ); /* Gradient background */
+  color: white; /* White text */
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+}
+
+.names img {
+  width: 200px; /* Fixed image width */
+  height: 250px; /* Fixed image height */
+  border-radius: 50%; /* Circular image */
+  border: 5px solid whitesmoke; /* Gold border around image */
+}
+
+.bio h2 {
+  font-size: 2rem; /* Title font size */
+}
+
+.bio p {
+  font-size: 1.2rem; /* Paragraph font size */
+  color: #eee; /* Light gray text */
+}
+
+/* === About Section === */
+#about {
+  background: white; /* White background */
+  padding: 40px; /* Internal padding */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft card shadow */
+}
+
+#about h2 {
+  font-size: 2.5rem; /* Large section heading */
+  color: #003366; /* Navy color */
+  font-family: Georgia, serif; /* Serif font for elegance */
+}
+
+#about p {
+  max-width: 75ch; /* Limit line length for readability */
+  line-height: 1.7; /* Line spacing for readability */
+}
+
+/* === Skills, Certifications, Projects Section === */
+#skills,
+#projects {
+  background: white;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft card shadow */
+  padding: 10px; /*Internal padding*/
+}
+
+#projects {
+  margin-top: 50px; /* Space above each section */
+  background: white; /* White card background */
+}
+
+#skills h2,
+#projects h2,
+#experience h2 {
+  font-size: 2.5rem; /* Section heading size */
+  color: #003366; /* Navy color */
+  margin-bottom: 20px; /* Space below heading */
+  font-family: Georgia, serif; /* Elegant font */
+}
+
+#projects img {
+  width: 100%; /* Full width image */
+  object-fit: cover; /* Fill area while cropping if needed */
+  border-radius: 10px; /* Rounded image corners */
+}
+
+/* Grid layout for list items in skills, certs, projects */
+#skills ul,
+#certifications ul,
+#projects ul,
+#experience ul {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  padding: 0;
+}
+
+#skills li,
+#certifications li,
+#projects li {
+  background: #fff; /* White card background */
+  padding: 20px; /* Internal spacing */
+  border-radius: 10px; /* Rounded card */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  transition: all 0.3s ease-in-out; /* Hover effect transition */
+  list-style: none; /* Remove bullet points */
+}
+
+#skills li:hover,
+#certifications li:hover,
+#projects li:hover {
+  transform: translateY(-5px); /* Lift card up on hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Darker hover shadow */
+  border: 2px solid #ffd700; /* Gold border on hover */
+}
+
+/* === Contact Section === */
+#contact {
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center all text */
+  margin-top: 4rem; /* Space above contact section */
+  padding: 50px 20px; /* Internal spacing */
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark text */
+}
+
+#contact form {
+  display: flex; /* Stack form fields */
+  flex-direction: column; /* Vertical layout */
+  width: 100%; /* Full width on small screens */
+  max-width: 400px; /* Max form width */
+}
+
+#contact label {
+  font-size: 1.1rem; /* Label text size */
+  margin-bottom: 0.1rem; /* Tiny space below */
+  font-weight: bold; /* Bold labels */
+}
+
+#contact input,
+#contact textarea {
+  padding: 1rem; /* Inner spacing */
+  width: 100%; /* Full width */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Text size */
+  margin-bottom: 0.5rem; /* Space below field */
+}
+
+#contact textarea {
+  height: 10rem; /* Tall text area */
+}
+
+#contact button {
+  background-color: #005bb5; /* Blue button */
+  color: white; /* White text */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1.2rem; /* Button text size */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+#contact button:hover {
+  background-color: #ffd700; /* Gold background on hover */
+  color: #0066cc; /* Blue text on hover */
+}
+
+/* === Search Bar === */
+.search {
+  position: relative; /* Needed for positioning button */
+  display: flex; /* Layout horizontally */
+  justify-content: center; /* Center search bar */
+  align-items: center; /* Center vertically */
+}
+
+.search input {
+  width: 20rem; /* Width of input */
+  height: 2rem; /* Height of input */
+  border: 1px solid #ffd700; /* Gold border */
+  border-radius: 2rem; /* Pill shape */
+  padding: 1rem; /* Internal space */
+}
+
+.search button {
+  height: 2rem; /* Height matches input */
+  width: 5rem; /* Button width */
+  color: #0066cc; /* Blue text */
+  background-color: #ffd700; /* Gold background */
+  border: none; /* No border */
+  border-top-right-radius: 2rem; /* Match pill shape */
+  border-bottom-right-radius: 2rem;
+  position: absolute; /* Position on top of input */
+  right: 0; /* Align to right */
+  top: 0; /* Align to top */
+}
+
+/* === Footer === */
+footer {
+  background: #003366; /* Navy background */
+  color: white; /* White text */
+  padding: 20px; /* Inner space */
+  text-align: center; /* Centered text */
+}
+
+/* === Additional Small Screen Adjustments for 320px === */
+@media (max-width: 768px) {
+  body {
+    padding: 2px; /* Reduce body padding */
+  }
+  .container {
+    width: 100%; /* Full width on small screens */
+    padding: 0px !important; /* Remove margin and padding */
+  }
+  .child_nav {
+    width: 100%; /* Full width for child nav */
+    margin: 2px; /* Remove padding and margin */
+  }
+  .child_nav nav {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+  }
+  .navigation .btn {
+    padding: 0px 20px;
+    margin-top: 10px;
+  }
+  #hero {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+  }
+  .names img {
+    width: 150px;
+    height: 150px; /* Smaller image */
+  }
+  .bio h2 {
+    font-size: 1.5rem; /* Smaller title */
+  }
+  .bio {
+    max-width: 100%; /* Full width */
+  }
+
+  #skills ul,
+  #certifications ul,
+  #projects ul {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Smaller card grid */
+  }
+
+  .navigation {
+    align-items: center; /* Center links */
+    margin: 0;
+    padding: 0;
+  }
+  .nav-container {
+    width: 90%;
+    flex-direction: column !important;
+  }
+}
